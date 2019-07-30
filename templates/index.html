@@ -1,1 +1,16 @@
-<!-- Put the HTML template for your page here! -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+	{% for i in foods%}
+		<p>{{i}}</p>
+	{%endfor%}
+
+	{% if day == True %}
+		<p>{{least_fav}}</p>
+	{%endif%}
+</body>
+</html>
